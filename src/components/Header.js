@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -8,6 +8,7 @@ import {useTranslation} from "react-i18next";
 import {Link} from "react-router-dom";
 import {useWindowWidth} from "@react-hook/window-size";
 import TrackShipment from "./TrackShipment/TrackShipment";
+import {addArToBody} from "../utilities/helper";
 
 const Header = () => {
   const [t, i18n] = useTranslation();
@@ -121,15 +122,11 @@ const Header = () => {
                 if (width <= 991) {
                   setTimeout(() => document.getElementById('toggleBtn')?.click(), 300)
                 }
-                if (t("header.otherLangKey") === "ar") {
-                  document.body.classList.add("ar");
-                } else {
-                  document.body.classList.remove("ar");
-                }
+                addArToBody(t("header.otherLangKey") === "ar");
                 localStorage.setItem("otherLangKey", t("header.otherLangKey"));
                 i18n.changeLanguage(t("header.otherLangKey"));
               }}
-              className={"hover-item-border cairo-black font-20 red"}
+              className={"hover-item-border cairo-black font-20 red pointer"}
             >
               <span className={"header-item-border"}/>
               {t("header.otherLang")}

@@ -1,4 +1,4 @@
-export default {
+const enLocal = {
   pageTitle: 'Bosta',
   header: {
     title: 'Bosta',
@@ -46,4 +46,5 @@ export default {
   DELIVERED_TO_SENDER: 'Delivered to sender',
   'Alexandria Hub': 'Alexandria Hub',
   'تأجيل - العميل طلب التاجيل ليوم اخر': 'Delay - User request change delivery day',
-}
+};
+export default enLocal;

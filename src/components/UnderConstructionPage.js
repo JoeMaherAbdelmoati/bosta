@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {useTranslation} from "react-i18next";
 
 const UnderConstructionPage = ({pageName}) => {
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   return <div>
-    <img src={'/construction.jpg'} className={'bg-image'}/>
+    <img alt='under construction' src={'/construction.jpg'} className={'bg-image'}/>
     <span className={'absolute-center dark cairo-semi-bold font-18 bg-white p-2 border-radius-10'}>
       {`${t('underConstruction')} ${t(pageName)}`}
     </span>

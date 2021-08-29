@@ -42,7 +42,6 @@ const TrackShipmentDetails = () => {
   const deliverWithin = getDateFormatted(shipmentData.CurrentStatus.timestamp, localeType, shortDateOptions);
   const coloredStateKey = shipmentData.TransitEvents.filter(i => shipmentStatusColor.includes(i.state))[0]?.state;
   const coloredKey = stateToColor[coloredStateKey] || 'normal';
-  console.log(stateToColor, coloredStateKey, coloredKey)
   const shipmentProgressStatusColor = progressColorObject[coloredKey];
 
   return (
@@ -131,7 +130,7 @@ const TrackShipmentDetails = () => {
           </div>
           <div className="card bg-light-gray text-left mt-2 problem-card">
             <div className="items-container d-flex align-items-center justify-content-center">
-              <img src='/have-problem.png' width='150' height='150'/>
+              <img alt='have-a-problem' src='/have-problem.png' width='150' height='150'/>
               <div className="flex-column text-container">
                 <p className='cairo-semi-bold black'>{t('haveProblem')}</p>
                 <span className='custom-button'>{t('reportProblem')}</span>

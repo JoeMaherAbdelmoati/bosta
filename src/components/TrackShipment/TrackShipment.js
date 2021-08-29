@@ -17,7 +17,7 @@ const debouncedFunc = ({history, value, t, searchFn}) => debounce(() => {
 }, 200, true);
 const TrackShipment = ({searchFn}) => {
   const history = useHistory();
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   const [value, setValue] = useState('');
   return (<>
     <h4 className='cairo-semi-bold'>{t('header.trackYourShipment')}</h4>

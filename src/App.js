@@ -13,13 +13,17 @@ import UnderConstructionPage from "./components/UnderConstructionPage";
 import Footer from "./components/Footer";
 import TrackShipmentPage from "./components/TrackShipment/TrackShipmentPage";
 import TrackShipmentDetails from "./components/TrackShipment/TrackShipmentDetails";
+import {addArToBody} from "./utilities/helper";
 
 function App() {
   const [t, i18n] = useTranslation();
   useEffect(() => {
     const language = localStorage.getItem('otherLangKey');
-    if (language) i18n.changeLanguage(language);
-  }, []);
+    if (language) {
+      addArToBody(language === 'ar');
+      i18n.changeLanguage(language);
+    }
+  }, [i18n]);
   return (
     <Router>
       <Helmet>

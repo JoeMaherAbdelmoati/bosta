@@ -1,10 +1,8 @@
-import {timeOptions} from "../config/index.config";
-
 export function debounce(func, wait, immediate) {
   let timeout;
-  return function() {
+  return function () {
     let context = this, args = arguments;
-    let later = function() {
+    let later = function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
@@ -14,6 +12,14 @@ export function debounce(func, wait, immediate) {
     if (callNow) func.apply(context, args);
   };
 }
-export const getDateFormatted=(date,localeType,options)=>{
+
+export const getDateFormatted = (date, localeType, options) => {
   return new Intl.DateTimeFormat(localeType, options).format(new Date(date))
+}
+export const addArToBody = (condition) => {
+  if (condition) {
+    document.body.classList.add("ar");
+  } else {
+    document.body.classList.remove("ar");
+  }
 }

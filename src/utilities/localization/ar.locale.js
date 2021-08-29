@@ -1,4 +1,4 @@
-export default {
+const arLocale = {
   pageTitle: 'بوسطة',
   header: {
     title: 'بوسطة',
@@ -46,4 +46,5 @@ export default {
   DELIVERED_TO_SENDER: 'تم الإرجاع للبائع',
   'Alexandria Hub': 'مركز الإسكندرية',
 
-}
+};
+export default arLocale;
