@@ -1,0 +1,31 @@
+$primary: #FF0000;
+$gray-100: #fafafa;
+$gray-200: #f1f1f1;
+$gray-300: #dadada;
+$gray-400: #888888;
+$black: #101010;
+$green: #36B600;
+$yellow: #F9BA02;
+.black {
+  color: $black !important;
+}
+
+.red {
+  color: $primary !important;
+}
+
+.yellow {
+  color: $yellow !important;
+}
+
+.gray {
+  color: $gray-400 !important;
+}
+
+.white {
+  color: white;
+}
+
+.bg-red {
+  background: $primary;
+}

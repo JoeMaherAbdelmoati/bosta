@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Cairo-Regular';
+  src: url('../fonts/Cairo-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-Bold';
+  src: url('../fonts/Cairo-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-Light';
+  src: url('../fonts/Cairo-Light.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-SemiBold';
+  src: url('../fonts/Cairo-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-ExtraLight';
+  src: url('../fonts/Cairo-ExtraLight.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-Black';
+  src: url('../fonts/Cairo-Black.ttf') format('truetype');
+  font-display: swap;
+}
+
+$cairo-regular: 'Cairo-Regular';
+$cairo-bold: 'Cairo-Bold';
+$cairo-semi-bold: 'Cairo-SemiBold';
+$cairo-light: 'Cairo-Light';
+$cairo-extra-light: 'Cairo-ExtraLight';
+$cairo-black: 'Cairo-Black';
+
+.cairo-regular {
+  font-family: $cairo-regular;
+}
+
+.cairo-bold {
+  font-family: $cairo-bold;
+}
+
+.cairo-semi-bold {
+  font-family: $cairo-semi-bold;
+}
+
+.cairo-light {
+  font-family: $cairo-light;
+}
+
+.cairo-extra-light {
+  font-family: $cairo-extra-light;
+}
+
+.cairo-black {
+  font-family: $cairo-black;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-22 {
+  font-size: 22px;
+}

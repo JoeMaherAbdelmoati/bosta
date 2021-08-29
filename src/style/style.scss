@@ -1,0 +1,225 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~react-notifications/lib/notifications.css";
+@import "fonts";
+@import "colors";
+
+.border-light-gray {
+  border-bottom: 1px solid $gray-200;
+}
+
+.header-item-border {
+  width: 100%;
+  position: relative;
+  height: 2px;
+  background: transparent;
+  display: flex;
+  bottom: 16px;
+}
+
+.hover-item-border:hover {
+  .header-item-border {
+    background: red;
+  }
+}
+
+@media (max-width: 991px) {
+  .hover-item-border:hover {
+    .header-item-border {
+      background: transparent;
+    }
+  }
+}
+
+.column {
+  height: 30px;
+  width: 1px;
+  background: $gray-300;
+}
+
+.hide-arrow {
+  .arrow {
+    display: none;
+  }
+}
+
+.navbar-nav .nav-link {
+  padding: .5rem 1rem !important;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.popup-body {
+  width: 300px;
+  height: 130px;
+}
+
+.no-border {
+  border: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bg-image {
+  width: 100%;
+  height: 88.9vh;
+  object-fit: cover;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.border-radius-10 {
+  border-radius: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.custom-card {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px #dedede;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.step {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $gray-300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 6px;
+  background: $white;
+  color: $gray-300;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+}
+
+.step-1 {
+  left: 60px;
+}
+
+.step-2 {
+  left: 30%;
+}
+
+.step-3 {
+  left: 64%;
+}
+
+.step-4 {
+  right: 10px;
+}
+
+@mixin stepper-color($color) {
+  .progress-bar {
+    background: $color;
+  }
+  .active-step {
+    background: $color;
+    border: 1px solid $color;
+    color: $white;
+  }
+}
+
+.stepper-green {
+  @include stepper-color($green)
+}
+
+.stepper-yellow {
+  @include stepper-color($yellow)
+}
+
+.stepper-red {
+  @include stepper-color($primary)
+}
+
+.passed-step {
+  transform: scale(0.5) translate(-50%, -50%);
+  bottom: 18.5px;
+}
+
+.passed-step.step-1 {
+  left: 35px;
+}
+
+@media (max-width: 500px) {
+  .active-step {
+    transform: scale(0.8) translate(-50%, -50%);
+    bottom: 12px;
+  }
+  .active-step.passed-step {
+    transform: scale(0.5) translate(-50%, -50%);
+    bottom: 18.5px;
+  }
+
+}
+
+.hr {
+  border-top: 1px solid $gray-300;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.fix-position-2-step {
+  position: relative;
+  right: 10%;
+}
+
+.border-gray {
+  border: 1px solid $gray-300;
+}
+
+.bg-light-gray {
+  background: $gray-100;
+}
+
+.custom-button {
+  background: $primary;
+  color: $white;
+  border-radius: 10px;
+  padding: 10px 8px;
+  display: inline-block;
+  text-align: center;
+  width: 90%;
+}
+
+.problem-card {
+  @media (max-width: 991px) and (min-width: 768px) {
+    .items-container {
+      flex-direction: column;
+    }
+    .text-container {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.big-td {
+  td {
+    height: 70px;
+  }
+}
+
+@import "ar.style";
